@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/aplogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>AP Assistant</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/aplogo.png" alt="logo">
+            <span>Assistant</span>
+        </div>
+        <button class="btn">
+            Sign In
+        </button>
+    </header>
+    <main class="main">
+        <div class="output-container">
+            <div class="output-box">
+                <p class="output" id="output">
+                    Welcome to AP Assistant!
+                </p>
+            </div>
+        </div>
+        <div class="voice-input-container">
+            <div class="voice-input">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </div>
+        <form class="input-container" id="chat-input-box">
+            <input type="text" placeholder="Enter..." id="input"  class="input">
+            <button title="submit" type="submit" id="enter-btn" class="btn-input" ><i class="fa-solid fa-bolt"></i></button>
+            <button title="voice" type="button" id="voice-btn" class="btn-input"><i class="fa-solid fa-microphone"></i></button>
+        </form>
+        <div class="alert-container">
+            <button type="button" class="btn-close"><span>X</span></button>
+            <div class="alert-box">
+                <p id="alert-text"></p>            
+            </div>       
+        </div>
+    </main>
+    <footer class="footer"></footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@5.0.2/marked.min.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
