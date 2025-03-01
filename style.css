@@ -1,271 +1,275 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap');
-:root{
-    --light:#ffff;
-    --dark:#252525;
-    --primary:#f8bc69;
-    --primary-light:#f8bc6952;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap");
+:root {
+  --light: #ffff;
+  --dark: #252525;
+  --primary: #f8bc69;
+  --primary-light: #f8bc6952;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: 0;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing:.8px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.8px;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    width: 100vw;
-    height: 100vh;
-    background: url('img/background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("img/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-::-webkit-scrollbar{
-    width:.3rem;
-    background-color:rgba(0, 0, 0, .3);
+::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.3);
 }
-::-webkit-scrollbar-thumb{
-    border-radius: 3rem;
-    background-color: var(--primary-light);
+::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: var(--primary-light);
 }
-::-webkit-scrollbar-thumb:hover{
-    background-color: var(--primary);
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
 }
-.btn{
-    min-width:5rem;
-    height:2.5rem;
-    background-color:var(--light);
-    color: var(--dark);
-    outline: none;
-    border: none;
+.btn {
+  min-width: 5rem;
+  height: 2.5rem;
+  background-color: var(--light);
+  color: var(--dark);
+  outline: none;
+  border: none;
 }
 /*Header*/
-.header{
-    width: 100vw;
-    height: 5rem;
-    padding: 1rem;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header {
+  width: 100vw;
+  height: 5rem;
+  padding: 1rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.header .logo{
-    color: var(--primary);
-    font-weight: 300;
-    font-size: 1rem;
+.header .logo {
+  color: var(--primary);
+  font-weight: 300;
+  font-size: 1rem;
 }
-.header .logo img{
-    width:3rem;
-    height:3rem;
-    aspect-ratio: 4/4;
+.header .logo img {
+  width: 3rem;
+  height: 3rem;
+  aspect-ratio: 4/4;
 }
-.header .btn{
-    outline: 1px solid var(--primary);
-    padding: .2rem .5rem;
-    background-color: transparent;
-    color: var(--primary);
-    font-size: 1rem;
-    font-weight: 400;
+.header .btn {
+  outline: 1px solid var(--primary);
+  padding: 0.2rem 0.5rem;
+  background-color: transparent;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 400;
 }
-.header .btn:hover{
-    outline: 2px solid var(--primary);
-    background-color: var(--primary);
-    color: var(--light);
+.header .btn:hover {
+  outline: 2px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--light);
 }
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.main .output-container{
-    min-width: 10rem;
-    min-height: 10rem;
-    padding: 2rem 1rem 1rem 1.5rem ;
-    aspect-ratio:4/2;
-    background-color: rgba(0, 0, 0, .5);
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter:blur(2rem);
-    box-shadow: .1rem .1rem 1rem .1rem var(--primary-light);
-    border-radius:5rem 4rem 3rem 0 ;
-    outline: .1rem solid var(--primary);
-    position: absolute;
-    top:30%;
-    bottom: 50%;
-    right: 60%;
-    left: 60%;
-}
-.main .output-box{
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-}
-.main .output-container .output{
-    color: var(--primary);
-    font-size: 1rem;
-    font-weight: 200;
-}
-.main .input-container{
-    width: 25rem;
-    height:5rem;
-    padding: 1rem .5rem;
-    border-radius: 1rem;
-    outline:.1rem solid var(--primary);
-    background-color: rgba(0, 0, 0, .5);
-    box-shadow: 1rem .1rem 1rem .1rem var(--primary-light);
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter:blur(2rem);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-    bottom: 3%;
-    animation: input-container-anime 5s linear infinite alternate;
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.main .input-container .input{
-    width: 15rem;
-    font-size: 1.2rem;
-    background: transparent;
+.main .output-container {
+  min-width: 15rem;
+  min-height: 15rem;
+  max-width: 50rem;
+  max-height: 50rem;
+  padding: 2rem;
+  aspect-ratio: 4/2;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  box-shadow: 0.1rem 0.1rem 1rem 0.1rem var(--primary-light);
+  border-radius: 5rem 4rem 3rem 0;
+  outline: 0.1rem solid var(--primary);
+  position: absolute;
+  top: 30%;
+  bottom: 50%;
+  right: 60%;
+  left: 60%;
+}
+.main .output-box {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+.main .output-container .output {
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 200;
+}
+.main .input-container {
+  width: 25rem;
+  height: 5rem;
+  padding: 1rem 0.5rem;
+  border-radius: 1rem;
+  outline: 0.1rem solid var(--primary);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 1rem 0.1rem 1rem 0.1rem var(--primary-light);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 3%;
+  animation: input-container-anime 5s linear infinite alternate;
+}
+
+.main .input-container .input {
+  width: 15rem;
+  font-size: 1.2rem;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: var(--primary);
+}
+::placeholder {
+  color: var(--primary-light);
+}
+.main .input-container .btn-input {
+  width: 2.5rem;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  background: var(--primary);
+  color: var(--light);
+  aspect-ratio: 4/4;
+  border-radius: 50%;
+}
+.main .input-container .btn-input:hover {
+  outline: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+}
+.main .voice-input-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.1rem);
+  -webkit-backdrop-filter: blur(0.1rem);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+.main .voice-input {
+  min-width: 20rem;
+  min-height: 20rem;
+  padding: 2rem;
+  aspect-ratio: 4/4;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  border-radius: 10rem;
+  outline: 0.1rem solid var(--primary);
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .voice-input i {
+  padding: 2rem;
+  aspect-ratio: 4/4;
+  border-radius: 50%;
+  color: var(--primary);
+  font-size: 3rem;
+  animation: voice-input-anime 1s ease infinite alternate;
+}
+@keyframes voice-input-anime {
+  0% {
     outline: none;
     border: none;
-    color: var(--primary);
-}
-::placeholder{
-    color: var(--primary-light);
-}
-.main .input-container .btn-input{
-    width:2.5rem;
-    height:2.5rem;
-    outline: none;
-    border: none;
-    background: var(--primary);
-    color: var(--light);
-    aspect-ratio: 4/4;
-    border-radius:50%;
-}
-.main .input-container .btn-input:hover{
-    outline: 1px solid var(--primary);
-    background: transparent;
-    color: var(--primary);
-}
-.main .voice-input-container{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, .5);
-    backdrop-filter: blur(.1rem);
-    -webkit-backdrop-filter: blur(.1rem);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 3;
-    display: none;
-}
-.main .voice-input{
-    min-width: 20rem;
-    min-height: 20rem;
-    padding:2rem;
-    aspect-ratio:4/4;
-    background-color: rgba(0, 0, 0, .5);
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter:blur(2rem);
-    border-radius: 10rem;
-    outline: .1rem solid var(--primary);
-    position: absolute;
-    top:50%;
-    bottom: 50%;
-    right: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    overflow: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.main .voice-input i{
-    padding: 2rem;
-    aspect-ratio: 4/4;
-    border-radius: 50%;
-    color: var(--primary);
-    font-size: 3rem;
-    animation: voice-input-anime 1s ease infinite alternate;
-}
-@keyframes voice-input-anime{
-    0%{
-        outline: none;
-        border: none;
-        opacity: 0.5;
-    }
-    50%{
-        border:.1rem dashed var(--primary);
-    }
-    100%{
-        border:.1rem solid var(--primary);
-        outline:.3rem solid var(--primary);
-        outline-offset:1rem;
-    }
+    opacity: 0.5;
+  }
+  50% {
+    border: 0.1rem dashed var(--primary);
+  }
+  100% {
+    border: 0.1rem solid var(--primary);
+    outline: 0.3rem solid var(--primary);
+    outline-offset: 1rem;
+  }
 }
 
 /**Alert**/
-.alert-container{
-    width:25rem;
-    max-height:10rem;
-    padding:.5rem;
-    aspect-ratio: 4/1;
-    background-color: rgba(0, 0, 0, .5);
-    backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter:blur(1rem);
-    outline: .1rem solid var(--primary);
-    border-radius:1rem;
-    box-shadow: .1rem .1rem 1rem .1rem var(--primary-light);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transform: translateY(-200%);
-    transition: transform .5s linear;
+.alert-container {
+  width: 20rem;
+  max-height: 5rem;
+  padding: 0.5rem;
+  aspect-ratio: 4/1;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  outline: 0.1rem solid var(--primary);
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 1rem 0.1rem var(--primary-light);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: translateY(-500%);
+  transition: transform 0.5s linear;
 }
-.active{
-    transform: translateY(0%) !important;
-    display: flex;
+.active {
+  transform: translateY(0%) !important;
+  display: flex;
 }
-.alert-box{
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
+.alert-box {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 }
-#alert-text{
-    color: var(--primary);
-    font-size: 1rem;
-    font-weight: 400;
-    text-wrap: wrap;
-    text-align: center;
+#alert-text {
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 400;
+  text-wrap: wrap;
+  text-align: center;
 }
-.alert-container .btn-close{
-    width:2rem;
-    height:2rem;
-    text-align: center;
-    outline: none;
-    border: none;
-    background: var(--primary);
-    color: var(--light);
-    aspect-ratio: 4/4;
-    border-radius:50%;
-    position: absolute;
-    top:-50px;
+.alert-container .btn-close {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  background: var(--primary);
+  color: var(--light);
+  aspect-ratio: 4/4;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
 }
-.alert-container .btn-close:hover{
-    outline: 1px solid var(--primary);
-    background: rgba(0, 0, 0, .3);
-    backdrop-filter: blur(10rem);
-    -webkit-backdrop-filter:blur(10rem);
-    color: var(--primary);
+.alert-container .btn-close:hover {
+  outline: 1px solid var(--primary);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10rem);
+  -webkit-backdrop-filter: blur(10rem);
+  color: var(--primary);
 }
