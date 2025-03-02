@@ -34,7 +34,7 @@ async function chat() {
       },
       body: JSON.stringify({
         model: "deepseek/deepseek-chat:free",
-        messages: [{ role: "user", content: message }],
+        messages: [{ role: "user", content: message}],
       }),
     });
 
@@ -54,7 +54,7 @@ async function chat() {
       cursor: false,
     }).go();
 
-    if (outputText.length < 1000) {
+    if (outputText.length < 500) {
       speechSynthesis.speak(
         new SpeechSynthesisUtterance(
           outputText.replace(
@@ -106,7 +106,7 @@ voiceBtn.addEventListener("click", () => {
 
   recognition.onresult = (event) => {
     input.value = event.results[0][0].transcript;
-    chat(); // Automatically send the message
+    chat();
   };
 
   recognition.onend = () => {
